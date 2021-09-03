@@ -1,8 +1,8 @@
 class Player
     def hand
-        while true
             # プレイヤーにじゃんけんの手を選択させる文章を表示させます。
             puts "数字を入力してください。"
+            while true
             puts "0:グー, 1:チョキ, 2:パー"
             # 変数「input_hand」にプレイヤーの入力値を代入します。
             # ヒント：getsメソッドについて調べてみましょう。
@@ -17,6 +17,7 @@ class Player
               elsif player_hand == 2
                 return 2
               else
+                puts '0〜2の数字を入力してください。'
             # else それ以外の場合
             # プレイヤーに「0〜2」を入力させる文章を表示させる。
             # puts "0〜2の数字を入力してください。"
