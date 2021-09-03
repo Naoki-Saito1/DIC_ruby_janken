@@ -6,17 +6,15 @@ class Player
             puts "0:グー, 1:チョキ, 2:パー"
             # 変数「input_hand」にプレイヤーの入力値を代入します。
             # ヒント：getsメソッドについて調べてみましょう。
-            player_hand = gets.to_i
+            player_hand = gets.chomp
             # 「input_hand」が「0, 1, 2」のいずれかだと繰り返し処理を終了し、それ以外（アルファベットも含む）だと繰り返し処理を継続します。
             # if 「input_hand」が「0, 1, 2」のいずれかの場合だった場合
             # ヒント：include?メソッドについて調べてみましょう。
-            if player_hand ==  0
-                return 0
-              elsif player_hand == 1
-                return 1
-              elsif player_hand == 2
-                return 2
-              else
+            
+            if player_hand == "0" || player_hand == "1" || player_hand == "2"
+              return player_hand.to_i
+            else
+          
                 puts '0〜2の数字を入力してください。'
             # else それ以外の場合
             # プレイヤーに「0〜2」を入力させる文章を表示させる。
